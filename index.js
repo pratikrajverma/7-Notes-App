@@ -7,7 +7,7 @@ const savenote = ()=>{
         data.push(note.value);
     })
 
-    console.log(data);
+
     localStorage.setItem('notes',JSON.stringify(data));
 
 }
@@ -47,8 +47,25 @@ function createnote()
         savenote();
     })
 
+   
 
 
 }
 
 
+
+function downloadNotes() {
+    const notesData = localStorage.getItem('notes');
+
+    JSON.parse(notesData);
+
+    if (notesData) {
+      const blob = new Blob([notesData], { type: 'text/plain' });
+      const downloadLink = document.createElement('a');
+      downloadLink.download = 'my_notes.txt';
+      downloadLink.href = window.URL.createObjectURL(blob);
+      downloadLink.click();
+    } else {
+      alert('No notes found to download!');
+    }
+  }

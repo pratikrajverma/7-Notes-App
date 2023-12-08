@@ -1,0 +1,74 @@
+*,*::after,*::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100wh;
+    min-height: 100vh;
+    background-color: #22a6b3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 5rem 3rem;
+}
+
+
+.note{
+    background-color: #f6e58d;
+    height: 25rem;
+    width:20rem ;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(110, 110, 110);
+}
+
+.tollbar{
+    background-color: black;
+    padding: .5rem;
+    display: flex;
+    justify-content: end;
+}
+
+i{
+    padding: 5px 8px;
+    cursor: pointer;
+    color: white;
+}
+i:hover{
+    color: #f6e58d;
+}
+
+textarea{
+height: 90%;
+width: 100%;
+font-size: 1.5rem;
+padding: 1rem;
+outline: none;
+border: none;
+border-radius: 5px;
+background-color: #f6e58d;
+resize: none;
+}
+
+
+button{
+    all: unset;
+    position: fixed;
+    right: 3rem;
+    top: 1rem;
+    background-color: black;
+    padding: .1rem 1rem ;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    width: 6rem;
+    height: 3rem;
+
+}
+
+button:active{
+    scale: .9;
+}
